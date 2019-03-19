@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+//connectを使ってComponentでStateへのアクセスとAction関数が使えるようにする
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
@@ -14,6 +15,7 @@ import '../App.css';
 
 class CalculatorContainer extends Component {
     render() {
+        //処理で使うState, Actionを出しておく
         const { calculator, actions } = this.props;
         return (
             <div>

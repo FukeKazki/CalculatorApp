@@ -1,11 +1,16 @@
 import * as actionTypes from '../utils/actionTypes';
-
+/*
+Stateの構造を固め、utils/actionTypes で列挙したconstをもとにStateの更新ロジックを書く
+機能によって複数のファイルに分ける
+*/
+//初期Stateを決めている
 const initialAppState = {
     inputValue: 0,
     resultValue: 0,
     showingResult: false,
 };
-
+//前のStateとActionを受け取りaction.typeの値に応じてswitch文で更新ロジックを決定する(パターンが少ない場合はif文でも良い)
+//更新ロジックが決定したらそのロジックに従い新しいStateを返す
 const calculator = (state = initialAppState, action) => {
     switch(action.type){
         case actionTypes.INPUT_NUMBER:

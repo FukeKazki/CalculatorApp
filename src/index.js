@@ -4,9 +4,10 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import CalculatorContainer from './containers/CalculatorContainer';
 import reducer from './reducers';
-// import * as serviceWorker from './serviceWorker';
 const store = createStore(reducer);
-
+/*
+StoreをReduxとReactの橋の役割をしてくれるProviderに渡す
+*/
 render (
     <Provider store={store} >
         <CalculatorContainer />
