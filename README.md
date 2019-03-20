@@ -1,3 +1,9 @@
 # CalculatorApp
 ## 開発環境
 React Redux  
+## Redux手順
+1. utils/actionTypes.jsを作成する  
+2. reducer/index.jsなどを作成する
+3. actions/index.jsを作成する
+4. index.jsに渡す
+5. containersに渡す
